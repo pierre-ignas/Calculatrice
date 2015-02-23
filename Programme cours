@@ -1,0 +1,183 @@
+#include <stdio.h> 
+#include <stdlib.h>
+
+int main() 
+{ 
+    /**Initialisation des variables */
+    char operateur;        /**Utilisé pour stocker l'opérateur de cacul demandé*/
+    int choix;            /**Utilisé pour choisir le type de variable qui sera utilisé*/
+    int testFin = 1;    /**Utilisé pour tester si oui ou non le programme doit s'arrêter*/
+
+
+    /**
+    *Boucle servant à recommencer le choix des varaibles
+    *tant que l'utilisateur laisse la variable 'testFin' à 1
+    */
+    while( testFin == 1)
+    {
+        /**Choix du type de varaible à utiliser*/
+        printf("Quel types voulez-vous utiliser?\n\t1.int_32\n\t2.int_64\n\t3.float\n\t4.double\n");
+        scanf("%d", &choix);
+
+        /**
+        *shitch(choix) : Permet de ne pacourir uniquement la partie 
+        *du code    correspondant au type de variable souhaité
+        */            
+            switch(choix)
+            {
+            case 1: /**Cas int_32*/
+
+                /**Boucle do while pour refaire un calcul tant que testFin est égal à 0*/
+                do{
+                    /**Initialisation des nombres*/
+                    int32_t nb1,nb2;    
+
+                    printf("Quel est votre calcul?\n");                /**demande du calcul à effectuer*/ 
+                    scanf("%d %c %d", &nb1 , &operateur , &nb2);    /**Récuprération des 2 valeur et du type de calcul à effectuer*/
+                    
+                    /**Choisit uniquement le calcul correspondant à la demande et affiche le résultat*/
+                    switch(operateur) 
+                    { 
+                    case '+':    
+                        printf("%d\n",nb1+nb2); 
+                        break; 
+                    case '-': 
+                        printf("%d\n",nb1-nb2); 
+                        break; 
+                    case '*': 
+                        printf("%d\n",nb1*nb2); 
+                        break; 
+                    case '/': 
+                        printf("%d\n",nb1/nb2); 
+                        break; 
+                    case '%': 
+                        printf("%d\n",nb1%nb2); 
+                        break; 
+                    default: 
+                        printf("Le calcul n'est pas valide."); 
+                    }
+
+                    /**Permet de demander à l'utilisateur s'il souhaite refaire un nouveau calcul, changer de variable ou bien quitter le programme*/
+                    printf("0. Continuer\n1. Changer de variables\n2. Fin");
+                    scanf("%d",&testFin);
+                }while (testFin == 0);
+            break;
+
+	        case 2:        
+		/**Cas int64_t*/            
+		do{
+                /**Initialisation des nombres*/
+                int64_t nl1,nl2;        
+
+                /**Boucle do while pour refaire un calcul tant que testFin est égal à 0*/
+                printf("Quel est votre calcul?\n");                /**demande du calcul à effectuer*/ 
+                scanf("%ld %c %ld", &nl1 , &operateur , &nl2);    /**Récuprération des 2 valeur et du type de calcul à effectuer*/
+
+                /**Choisit uniquement le calcul correspondant à la demande et affiche le résultat
+                switch(operateur)*/ 
+                { 
+                case '+': 
+                    printf("%ld\n",nl1+nl2); 
+                    break; 
+                case '-': 
+                    printf("%ld\n",nl1-nl2); 
+                    break; 
+                case '*': 
+                    printf("%ld\n",nl1*nl2); 
+                    break; 
+                case '/': 
+                    printf("%ld\n",nl1/nl2); 
+                    break; 
+                case '%': 
+                    printf("%ld\n",nl1%nl2); 
+                    break; 
+                default: 
+                    printf("Le calcul n'est pas valide."); 
+                }
+
+                /**Permet de demander à l'utilisateur s'il souhaite refaire un nouveau calcul, changer de variable ou bien quitter le programme*/
+                printf("0. Continuer\n1. Changer de variables\n2. Fin");
+                scanf("%d",&testFin);
+            }while (testFin == 0);
+            break;
+
+        case 3:        /**Cas float*/
+            do{
+                /**Initialisation des nombres*/
+                float n1,n2;
+
+                /**Boucle do while pour refaire un calcul tant que testFin est égal à 0*/
+                printf("Quel est votre calcul?\n");                /**demande du calcul à effectuer*/ 
+                scanf("%f %c %f", &n1 , &operateur , &n2);    /**Récuprération des 2 valeur et du type de calcul à effectuer*/
+
+                /**Choisit uniquement le calcul correspondant à la demande et affiche le résultat*/
+                switch(operateur) 
+                { 
+                case '+': 
+                    printf("%f\n",n1+n2); 
+                    break; 
+                case '-': 
+                    printf("%f\n",n1-n2); 
+                    break; 
+                case '*': 
+                    printf("%f\n",n1*n2); 
+                    break; 
+                case '/': 
+                    printf("%f\n",n1/n2); 
+                    break; 
+                default: 
+                    printf("Le calcul n'est pas valide."); 
+                }    
+                    
+                /**Permet de demander à l'utilisateur s'il souhaite refaire un nouveau calcul, changer de variable ou bien quitter le 			*programme
+ 		*/
+               
+		printf("0. Continuer\n1. Changer de variables\n2. Fin");
+                scanf("%d",&testFin);
+            }while (testFin == 0);
+            break;
+
+        case 4:        /**Cas double*/
+            do{
+                /**Initialisation des nombres*/
+                double nd1,nd2;
+
+                /**Boucle do while pour refaire un calcul tant que testFin est égal à 0*/
+                printf("Quel est votre calcul?\n");                /**demande du calcul à effectuer*/ 
+                scanf("%f %c %f", &nd1 , &operateur , &nd2);    /**Récuprération des 2 valeur et du type de calcul à effectuer*/
+
+                /**Choisit uniquement le calcul correspondant à la demande et affiche le résultat*/
+                switch(operateur) 
+                { 
+                case '+': 
+                    printf("%f\n",nd1+nd2); 
+                    break; 
+                case '-': 
+                    printf("%f\n",nd1-nd2); 
+                    break; 
+                case '*': 
+                    printf("%f\n",nd1*nd2); 
+                    break; 
+                case '/': 
+                    printf("%f\n",nd1/nd2); 
+                    break;  
+                default: 
+                    printf("Le calcul n'est pas valide."); 
+                }
+
+                /**Permet de demander à l'utilisateur s'il souhaite refaire un nouveau calcul, changer de variable ou bien quitter le programme*/
+                printf("0. Continuer\n1. Changer de variables\n2. Fin");
+                scanf("%d",&testFin);
+            }while (testFin == 0);
+            break;
+
+        default:    /**Cas où la demande n'est pas valide*/
+            printf("Le type de variable choisit n'est pas valide");
+
+        }    /**Fin du switch-case*/
+
+    }    /**Fin du while*/
+
+    return 0; 
+}
+
