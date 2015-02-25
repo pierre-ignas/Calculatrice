@@ -1,18 +1,18 @@
-#include <stdio.h> 
-#include <stdlib.h>
+///#include <stdio.h> 
+///#include <stdlib.h>
 
-int main() 
-{ 
-    /**Initialisation des variables */
-    char operateur;        /**Utilisé pour stocker l'opérateur de cacul demandé*/
-    int choix;            /**Utilisé pour choisir le type de variable qui sera utilisé*/
-    int testFin = 1;    /**Utilisé pour tester si oui ou non le programme doit s'arrêter*/
+///int main() 
+///{ 
+    ///Initialisation des variables
+    char operateur;        ///Utilisé pour stocker l'opérateur de cacul demandé
+    int choix;            ///Utilisé pour choisir le type de variable qui sera utilisé
+    int testFin = 1;    ///Utilisé pour tester si oui ou non le programme doit s'arrêter
 
 
-    /**
-    *Boucle servant à recommencer le choix des varaibles
-    *tant que l'utilisateur laisse la variable 'testFin' à 1
-    */
+    
+    ///Boucle servant à recommencer le choix des varaibles
+    ///tant que l'utilisateur laisse la variable 'testFin' à 1
+    
     while( testFin == 1)
     {
         /**Choix du type de varaible à utiliser*/
